@@ -47,7 +47,10 @@ export default function Home() {
       if (navigator.share) {
         await navigator.share(shareData);
       } else {
+<<<<<<< HEAD
         // Fallback for browsers that don't support native sharing
+=======
+>>>>>>> d4c57c7a592b0c506851059da322e46ff15ebf7e
         const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`;
         window.open(shareUrl, '_blank');
       }
@@ -57,12 +60,21 @@ export default function Home() {
   };
 
   const handleBookmark = () => {
+<<<<<<< HEAD
     if (window.sidebar && window.sidebar.addPanel) { // Firefox
       window.sidebar.addPanel(document.title, window.location.href, '');
     } else if (window.external && ('AddFavorite' in window.external)) { // IE
       // @ts-ignore
       window.external.AddFavorite(window.location.href, document.title);
     } else { // Modern browsers
+=======
+    if (window.sidebar && window.sidebar.addPanel) {
+      window.sidebar.addPanel(document.title, window.location.href, '');
+    } else if (window.external && ('AddFavorite' in window.external)) {
+      // @ts-ignore
+      window.external.AddFavorite(window.location.href, document.title);
+    } else {
+>>>>>>> d4c57c7a592b0c506851059da322e46ff15ebf7e
       alert('Press ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D to bookmark this page.');
     }
     setIsBookmarked(true);
@@ -70,7 +82,11 @@ export default function Home() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="max-w-2xl mx-auto">
+=======
+    <div className="max-w-4xl mx-auto px-6">
+>>>>>>> d4c57c7a592b0c506851059da322e46ff15ebf7e
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
